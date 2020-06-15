@@ -1,0 +1,11 @@
+<% if (appType === "react") { %>
+{
+  "extends": "./node_modules/@hesto2/config/tsconfig.react.json",
+  "include": ["./src/**/*.tsx", "./src/**/*.ts"]
+}
+<%} else { %>
+{
+  "extends": "./node_modules/@hesto2/config/tsconfig.json",
+  "include": ["./src/**/*.ts"]
+}
+<% } %>

@@ -1,0 +1,30 @@
+{
+  "name": "<%= projectName %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "main": "dist/index.js",
+  "keywords": [],
+  "author": "Carter Hesterman <hestermancarter@gmail.com>",
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hesto2/<%= projectName %>"
+  },
+  "bugs": {
+    "url": "https://github.com/hesto2/<%= projectName %>/issues"
+  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
