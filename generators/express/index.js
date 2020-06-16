@@ -4,27 +4,27 @@ const merge = require('lodash.merge');
 module.exports = class extends Generator {
   addDependencies() {
     this.dependencies = [
-      'react',
-      'react-dom',
-      'date-fns',
-      '@material-ui/core',
-      '@material-ui/icons',
-      '@material-ui/styles',
+      '@hesto2/express-utils',
+      'aws-sdk',
+      'aws-serverless-express',
       'axios',
-      'axios-hooks',
-      'clsx',
-      'react-router',
-      'react-router-dom',
-      'react-scripts@3.4.0',
-      'use-state-api-hooks',
+      'cors',
+      'date-fns',
+      'dotenv',
+      'express',
+      'form-data',
+      'querystring',
     ];
 
     this.devDependencies = [
+      '@types/aws-lambda',
+      '@types/aws-serverless-express',
+      '@types/express',
       '@types/jest',
-      '@types/node',
-      '@types/react',
-      '@types/react-dom',
-      '@types/react-router-dom',
+      'cross-env',
+      'eslint',
+      'jest',
+      'nodemon',
     ];
   }
   async writing() {

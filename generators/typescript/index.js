@@ -8,4 +8,7 @@ module.exports = class extends Generator {
       this.options
     );
   }
+  install() {
+    this.yarnInstall(['typescript', 'ts-node'], { dev: true });
+  }
 };

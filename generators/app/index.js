@@ -34,13 +34,20 @@ module.exports = class extends Generator {
         name: 'appType',
         message: 'What type of app are you making?',
         type: 'list',
-        choices: ['typescript', 'react'],
+        choices: ['express', 'react', 'lambda', 'empty'],
       },
       {
         name: 'useTerraform',
         message: 'Use terraform?',
         type: 'confirm',
+        default: true,
       },
+      // {
+      //   name: 'isLibrary',
+      //   message: 'Will this be a library?',
+      //   type: 'confirm',
+      //   default: false,
+      // },
     ]);
   }
 
@@ -75,6 +82,20 @@ module.exports = class extends Generator {
     if (this.answers.appType === 'react') {
       const reactGenerator = await this.composeWith(
         require.resolve('generator-hesto2/generators/react', {}, true),
+        this.answers
+      );
+    }
+
+    if (this.answers.appType === 'express') {
+      const reactGenerator = await this.composeWith(
+        require.resolve('generator-hesto2/generators/express', {}, true),
+        this.answers
+      );
+    }
+
+    if (this.answers.appType === 'lambda') {
+      const reactGenerator = await this.composeWith(
+        require.resolve('generator-hesto2/generators/lambda', {}, true),
         this.answers
       );
     }
