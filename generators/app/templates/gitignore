@@ -1,6 +1,5 @@
 # dependencies
-/node_modules
-/terraform/node_modules
+**/node_modules
 /terraform/.terraform
 /.pnp
 .pnp.js
@@ -9,8 +8,8 @@
 /coverage
 
 # production
-/build
-/dist
+**/build
+**/dist
 *.zip
 
 # misc

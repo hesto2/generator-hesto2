@@ -1,34 +1,7 @@
-{
-  "name": "<%= projectName %>",
-  "version": "0.0.0",
-  "description": "//TODO remove this package.json and copy its scripts into the actual one<%= description %>",
-  "main": "dist/index.js",
-  "keywords": [],
-  "author": "Carter Hesterman <hestermancarter@gmail.com>",
-  "engines": {
-    "node": ">=10",
-    "npm": ">=6"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hesto2/<%= projectName %>"
-  },
-  "bugs": {
-    "url": "https://github.com/hesto2/<%= projectName %>/issues"
-  },
-  "homepage": "https://github.com/hesto2/<%= projectName %>#readme",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI=\"\" PUBLIC_URL=\"//TODO\" react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "CI=\"\" PUBLIC_URL=\"//TODO\" yarn build && aws s3 sync build/ s3:// //TODO"
-  },
-  "dependencies": {},
-  "devDependencies": {},
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
+    "deploy": "aws s3 sync build/ s3:// //TODO"
   }
-}

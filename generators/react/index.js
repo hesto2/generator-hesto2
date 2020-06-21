@@ -27,6 +27,26 @@ module.exports = class extends Generator {
       '@types/react-router-dom',
     ];
   }
+  async prompting() {
+    this.answers = await this.prompt([
+      {
+        name: 'useStaticLambda',
+        message: 'Do you want to serve this app with a lambda function?',
+        type: 'confirm',
+        default: true,
+      },
+    ]);
+  }
+
+  async composedGenerators() {
+    if (this.answers.useStaticLambda) {
+      await this.composeWith(
+        require.resolve('generator-hesto2/generators/static-lambda'),
+        this.options
+      );
+    }
+  }
+
   async writing() {
     const variables = {
       ...this.options,

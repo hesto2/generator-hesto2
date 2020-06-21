@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "deploy": "deploy": "cd ./lambda && yarn && yarn deploy"
+  },
+}
