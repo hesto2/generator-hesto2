@@ -7,7 +7,7 @@ const getDynamoTable = (customer) => {
     bungeelink: 'bungeelink-server-terraform-lock',
     sqrd: 'terraform-state',
   };
-  return tableNames[customer];
+  return tableNames[customer] || 'terraform-lock';
 };
 
 module.exports = class extends Generator {
