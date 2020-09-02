@@ -21,8 +21,5 @@
     "pretty-quick": "^2.0.1"
   },
   "scripts": {
-    "test": "echo 'no tests'",
-    "build": "echo 'no build'",
-    "deploy": "echo 'no deploy'"
   }
 }
