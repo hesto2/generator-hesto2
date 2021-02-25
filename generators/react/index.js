@@ -25,6 +25,7 @@ module.exports = class extends Generator {
       '@types/react',
       '@types/react-dom',
       '@types/react-router-dom',
+      '@hesto2/config',
     ];
   }
   async prompting() {
