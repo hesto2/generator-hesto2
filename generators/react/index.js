@@ -26,6 +26,12 @@ module.exports = class extends Generator {
       '@types/react-dom',
       '@types/react-router-dom',
       '@hesto2/config',
+      '@storybook/addon-actions@6.1.20',
+      '@storybook/addon-essentials@6.1.20',
+      '@storybook/addon-links@6.1.20',
+      '@storybook/cli@6.1.20',
+      '@storybook/preset-create-react-app@3.1.6',
+      '@storybook/react@6.1.20',
     ];
   }
   async prompting() {
