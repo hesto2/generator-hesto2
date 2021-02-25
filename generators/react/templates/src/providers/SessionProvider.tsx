@@ -1,15 +1,23 @@
-import { createContext, useState, useContext } from 'react';
 import { Session } from '../types';
 import { getToken } from '../utils/tokenUtils';
+import { createContext, useState, useContext } from 'react';
 
-const token = getToken();
-export const SessionContext = createContext<
-  [Session | null, (session: Session | null) => void]
->([null, () => {}]);
+type SessionContextReturn = {
+  session: Session | null;
+  setSession: (update: Session) => void;
+};
+
+export const SessionContext = createContext<SessionContextReturn>({
+  session: null,
+  setSession: (_session) => null,
+});
 
 export const useSessionState = () => {
-  const sessionState = useState<Session | null>(token ? { token } : null);
-  return sessionState;
+  const token = getToken();
+  const [session, setSession] = useState<Session | null>(
+    token ? { token } : null
+  );
+  return { session, setSession };
 };
 
 export const useSession = () => {

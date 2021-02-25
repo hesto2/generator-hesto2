@@ -79,7 +79,7 @@ const Header = () => {
   const classes = useStyles();
   const { anchorEl, setAnchorEl, clearAnchorEl } = useAnchorElStateApi(null);
   const mobile = false;
-  const [session, setSession] = useSession();
+  const { session } = useSession();
   const items: any = [];
 
   return (

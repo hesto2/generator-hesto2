@@ -6,7 +6,7 @@ import { useSession } from './providers/SessionProvider';
 import LandingPage from './components/LandingPage/LandingPage';
 
 function App() {
-  const [session] = useSession();
+  const { session } = useSession();
   const history = useHistory();
   useEffect(() => {
     console.log(session);
