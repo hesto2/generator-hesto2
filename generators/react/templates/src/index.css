@@ -1,3 +1,26 @@
+@font-face {
+  src: url('https://pleasantpictures-images.s3-us-west-2.amazonaws.com/fonts/WebFonts/UntitledSansWeb-Regular.woff'),
+    url('https://pleasantpictures-images.s3-us-west-2.amazonaws.com/fonts/WebFonts/UntitledSansWeb-Regular.eot'),
+    url('https://pleasantpictures-images.s3-us-west-2.amazonaws.com/fonts/WebFonts/UntitledSansWeb-Regular.woff2');
+  font-family: 'UntitledSans';
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  src: url('https://pleasantpictures-images.s3-us-west-2.amazonaws.com/fonts/WebFonts/UntitledSansWeb-Bold.woff'),
+    url('https://pleasantpictures-images.s3-us-west-2.amazonaws.com/fonts/WebFonts/UntitledSansWeb-Bold.eot'),
+    url('https://pleasantpictures-images.s3-us-west-2.amazonaws.com/fonts/WebFonts/UntitledSansWeb-Bold.woff2');
+  font-family: 'UntitledSansBold';
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MetalHead';
+  src: url('https://pleasantpictures-images.s3-us-west-2.amazonaws.com/fonts/WebFonts//MetalHead.ttf');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +33,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

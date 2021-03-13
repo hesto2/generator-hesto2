@@ -5,5 +5,6 @@
     "eject": "react-scripts eject",
     "deploy": "aws s3 sync build/ s3:// //TODO",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "typecheck" :"tsc --noEmit"
   }
