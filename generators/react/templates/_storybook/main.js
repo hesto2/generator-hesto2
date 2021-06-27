@@ -7,4 +7,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-viewport',
   ],
+  parameters: {
+    actions: { argTypesRegex: '^on.*' },
+  },
 };

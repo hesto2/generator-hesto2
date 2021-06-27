@@ -1,12 +1,13 @@
 import React from 'react';
-import { useTheme } from '@material-ui/core';
 import Header from './Header';
+import { Story } from '@storybook/react';
 
 export default {
   title: 'Header',
   component: Header,
 };
 
-export const Default = () => {
-  return <Header />;
-};
+const Template: Story<{}> = (args: {}) => <Header {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {};
