@@ -32,6 +32,7 @@ module.exports = class extends Generator {
       '@storybook/cli@6.3.0',
       '@storybook/preset-create-react-app@3.1.7',
       '@storybook/react@6.3.0',
+      '@storybook/addon-viewport@6.3.0',
     ];
   }
   async prompting() {
