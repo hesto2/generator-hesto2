@@ -1,5 +1,4 @@
 const Generator = require('yeoman-generator');
-const merge = require('lodash.merge');
 
 module.exports = class extends Generator {
   addDependencies() {
@@ -17,6 +16,8 @@ module.exports = class extends Generator {
       'react-router-dom',
       'react-scripts@3.4.0',
       'use-state-api-hooks',
+      '@sentry/react',
+      'query-string',
     ];
 
     this.devDependencies = [
